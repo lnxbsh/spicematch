@@ -10,6 +10,7 @@ app = express()
 
 let miniSearch = new MiniSearch({
     fields: ['spices'],
+    storeFields: ['number'],
     processTerm: (term) =>
       stopWords.has(term) ? null : term.toLowerCase(), // index term processing
     searchOptions: {
